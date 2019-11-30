@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+		</div>
+		<h2>Heart Disease Prediction System</h2>
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST" autocomplete="off">
+        <h3><center>Enter Your Following Measures</center></h3>
+		<!--<p>Enter Your Following Parameters</p>-->
+		<!-- <input type="text" name="comment"/> -->
+		<p style="margin-left:400px;margin-top:50px">Age <input name="age" cols="50" style="margin-left:230px;height:20px" required></input></p>
+        <p style="margin-left:400px">Gender <input name="sex" cols="50" style="margin-left:206px;height:20px" required></input></p>
+        <p style="margin-left:400px">Chest Pain Type <input name="cp" cols="50" style="margin-left:145px;height:20px" required></input></p>
+        <p style="margin-left:400px">Resting Blood Pressure <input name="trestbps" cols="50" style="margin-left:98px;height:20px" required></input></p>
+        <p style="margin-left:400px">Serum Cholestrol <input name="chol" cols="50" style="margin-left:140px;height:20px" required></input></p>
+        <p style="margin-left:400px">Fasting Blood Sugar <input name="fbs" cols="50" style="margin-left:120px;height:20px" required></input></p>
+        <p style="margin-left:400px">Resting Electrocardiographic <input name="restecg" cols="50" style="margin-left:65px;height:20px" required></input></p>
+        <p style="margin-left:400px">Maximum Heart Rate <input name="thalach" cols="50" style="margin-left:115px;height:20px" required></input></p>
+        <p style="margin-left:400px">Excercise Induced Angina <input name="exang" cols="50" style="margin-left:83px;height:20px" required></input></p>
+        <p style="margin-left:400px">Old Peak <input name="oldpeak" cols="50" style="margin-left:195px;height:20px" required></input></p>
+        <p style="margin-left:400px">Slope <input name="slope" cols="50" style="margin-left:218px;height:20px" required></input></p>
+        <p style="margin-left:400px">CA <input name="ca" cols="50" style="margin-left:236px;height:20px" required></input></p>
+        <p style="margin-left:400px">Thal <input name="thal" cols="50" style="margin-left:228px;height:20px" required></input></p>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Predict" style="border-radius:8px;border: none;width:150px;color: white;font-size: 16px;margin:auto;display:block">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
+
